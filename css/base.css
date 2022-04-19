@@ -1,0 +1,215 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color:#181733;
+    --boder-color: #dbdbdb;
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height)- var(var(--navbar-height)))
+
+}
+::placeholder{
+    color: var(--white-color);
+}
+
+*{
+    box-sizing: inherit;
+    background-image: url();
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+
+}
+
+.grid{
+    width: 1800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid_full-with{
+    width: 100%;
+}
+
+.grid_row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Annimation */
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+
+    to{
+    opacity: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+        }
+    
+        to{
+        transform: scale(var(--growth-to));
+        }
+}
+/*modal*/
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0,0, 0.4)
+}
+
+.modal__body{
+    --growth-from: 0.7;
+    --growth-to: 1;
+   margin: auto;
+   position: relative;
+   z-index: 1;
+   animation: growth linear 0.1s;
+}
+
+/*button style*/
+
+.btn{
+    min-width: 142px;
+    min-height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+ 
+ 
+}
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+
+}
+.btn.btn--normal:hover{
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: #cf122d;
+}
+
+.btn.btn--disabled{
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+/* footer */
+
+  .col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:var(--primary-color); min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+/* countdown */
+
+.clock{
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+   background-color: #E0FFFE;
+    
+}
+.clock h2{
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+
+.countdown{
+    display: flex;
+
+    border-radius: 2px;
+}
+
+.time{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin :15px;
+color: #9F1E43;
+font-size: 2.2rem;
+font-weight: 700;
+
+}
+.nextmatch-img img{
+    display: flex;
+    margin: 0 auto;
+
+}
